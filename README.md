@@ -110,16 +110,16 @@ The model demonstrates excellent predictive performance on the prepared dataset.
 
 # ▶️ Installation
 
-#Clone the repository:
+Clone the repository:
 git clone https://github.com/tarzsardana-ship-it/Stock-Market-Analysis-Prediction.git
 
-#Move into the project folder:
+Move into the project folder:
 cd Stock-Market-Analysis-Prediction
 
-#Install dependencies:
+Install dependencies:
 pip install -r requirements.txt
 
-#Run the application:
+Run the application:
 streamlit run app.py
 
 ---
