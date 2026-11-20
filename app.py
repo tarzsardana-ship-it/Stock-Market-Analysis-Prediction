@@ -192,17 +192,20 @@ with st.spinner("Fetching latest stock data..."):
 
 latest = df.iloc[-1]
 from datetime import datetime, time
+from zoneinfo import ZoneInfo
 
-now = datetime.now().time()
+now = datetime.now(ZoneInfo("Asia/Kolkata"))
 
 market_open = time(9, 15)
 market_close = time(15, 30)
 
-if market_open <= now <= market_close:
-    market_status = "🟢 OPEN"
+if(
+    now.weekday()<5
+    and market_open <= now.time() < market_close
+):
+    market_status = "🟢Open"
 else:
-    market_status = "🔴 CLOSED"
-
+    market_status = "🔴Closed"
 live_price = float(latest["Close"])
 
 if len(df) > 1:
