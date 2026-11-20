@@ -334,30 +334,30 @@ m4.metric(
 # TOMORROW PREDICTION
 # ==========================================
 
-st.markdown("## 🔮 Tomorrow Prediction")
+st.markdown("## 🔮 Next Prediction")
 
 if change_percent > 2:
 
     st.success(
-        f"Tomorrow Expected Trend: Strong Bullish (+{change_percent:.2f}%)"
+        f"Expected Trend: Strong Bullish (+{change_percent:.2f}%)"
     )
 
 elif change_percent > 0:
 
     st.info(
-        f"Tomorrow Expected Trend: Bullish (+{change_percent:.2f}%)"
+        f"Expected Trend: Bullish (+{change_percent:.2f}%)"
     )
 
 elif change_percent < -2:
 
     st.error(
-        f"Tomorrow Expected Trend: Strong Bearish ({change_percent:.2f}%)"
+        f"Expected Trend: Strong Bearish ({change_percent:.2f}%)"
     )
 
 else:
 
     st.warning(
-        f"Tomorrow Expected Trend: Bearish ({change_percent:.2f}%)"
+        f"Expected Trend: Bearish ({change_percent:.2f}%)"
     )
 
 st.write(
